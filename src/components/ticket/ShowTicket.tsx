@@ -12,6 +12,7 @@ import AssignAgent from "../admin/AssignAgent";
 import DeleteTicket from "./DeleteTicket";
 import { useNavigate, useParams } from "react-router-dom";
 import { ChatBubbleOutline, PersonOutline, SupportAgent, History } from '@mui/icons-material';
+import AddPriority from "../admin/AddPriority";
 
 const ShowTicket = ({ ticket }: { ticket: Ticket }) => {
     const navigate = useNavigate();

@@ -12,6 +12,7 @@ import {
   Stack,
   Typography,
 } from "@mui/joy";
+import AddPriority from "../components/admin/AddPriority";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const AdminDashboard = () => {
             <Box>
               <Typography level="h2">Admin Dashboard</Typography>
               <Typography level="body-md" sx={{ color: "text.secondary", mt: 0.5 }}>
-                Manage users, tickets, and statuses.
+                Manage users, tickets, priorities and statuses.
               </Typography>
             </Box>
 
@@ -90,6 +91,25 @@ const AdminDashboard = () => {
                   </Typography>
                   <Divider sx={{ my: 2 }} />
                   <AddStatus />
+                </CardContent>
+              </Card>
+
+              <Card
+                variant="outlined"
+                sx={{
+                  flex: 2,
+                  borderRadius: "lg",
+                  bgcolor: "background.surface",
+                  boxShadow: "sm",
+                }}
+              >
+                <CardContent>
+                  <Typography level="title-md">Priorities</Typography>
+                  <Typography level="body-sm" sx={{ color: "text.secondary", mt: 0.5 }}>
+                    Add and manage ticket priorities.
+                  </Typography>
+                  <Divider sx={{ my: 2 }} />
+                  <AddPriority />
                 </CardContent>
               </Card>
             </Stack>
